@@ -99,7 +99,7 @@ def readWav2(path,s_r=8000):
     
     return sig
 
-for file in sorted(list(os.listdir('data_wav'))):
+for file in sorted(list(os.listdir('evaluation_wav'))):
     
     print (file)
-    evaluation('./data_wav/'+file)
+    evaluation('./evaluation_wav/'+file)
