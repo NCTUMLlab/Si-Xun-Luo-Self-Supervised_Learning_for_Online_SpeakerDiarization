@@ -26,7 +26,7 @@ Pytorch 1.2.0
 
 ## Preprocess
 
-  We use voxceleb1 and voxceleb2 dataset. You should download them and unzip. Or you can use other dataset and follow the format as voxceleb.
+  We use voxceleb1 and voxceleb2 dataset. You should download them and unzip. Or you can use other dataset and follow the same format as voxceleb.
 
 After downloaded, please create the folder named data_wav and put .wav files into it. Then you should call 
 ```bash
