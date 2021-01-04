@@ -41,7 +41,7 @@ Training function and model detail are both in train.py. Please run
 $ python training.py
 ```
 
-You can get the 'model_epoch.pkl' during training. The .pkl file is the model parameter.
+You can get the 'model_epoch.pkl' during training. The .pkl file is the model parameter for each epoch.
 
 
 
