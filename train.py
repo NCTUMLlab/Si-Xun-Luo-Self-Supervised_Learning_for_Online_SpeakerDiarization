@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 from loadData import *
 from createWavXandY import *
-from TDNN_ import *
+from Layer import *
 import time
 from tqdm import tqdm
 import librosa
@@ -19,42 +19,6 @@ for i in range(deviceCount):
     handle = nvmlDeviceGetHandleByIndex(i)
     print ("Device", i, ":", nvmlDeviceGetName(handle))
 
-class Model(nn.Module):
-
-    def __init__(self):
-
-        super(Model, self).__init__()
-        
-        #self.mfcc = MFCC(sample_rate=8000, n_mfcc= 23)
-
-        self.cos = nn.CosineSimilarity(dim=1, eps=1e-6)
-
-        self.TDNN = MyModel()
-        
-        self.softmax = nn.Softmax(dim=1)
-    
-    def load_(self):
-        
-        self.TDNN = torch.load('best.pkl')
-
-    def save_(self,epoch_):
-        
-        torch.save(self.TDNN,str(epoch_)+'_model.pkl')
-        
-        
-    def forward(self, x ):
-
-        one = torch.squeeze(x[:,0:1,:,:])
-
-        other = torch.squeeze(x[:,1:2,:,:])
-
-        one  = self.TDNN(one)
-
-        other= self.TDNN(other)
-
-        output = self.cos(one,other)
-
-        return output 
 
 def main():
 
