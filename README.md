@@ -15,9 +15,13 @@ This is the source code for the Master thesis Self-Supervised Learning for Onlin
 The developed environment is listed in below
 
 OS : Ubuntu 16.04
+
 CUDA : 11.1
+
 Nvidia Driver : 455.23
+
 Python 3.6.9
+
 Pytorch 1.2.0
 
 ## Preprocess
@@ -25,14 +29,16 @@ Pytorch 1.2.0
   We use voxceleb1 and voxceleb2 dataset. You should download them and unzip. Or you can use other dataset and follow the format as voxceleb.
 
 After downloaded, please call
-
+```bash
 $ python preprocessing.py .
-
+```
 After that, you will get the 'wav_X.npy' and 'wav_Y.npy', which is the input of our model for training.
 
 ## Training
 
+```bash
 $ python training.py
+```
 
 You can get the 'model_epoch.pkl' during training. The .pkl file is the model parameter.
 
