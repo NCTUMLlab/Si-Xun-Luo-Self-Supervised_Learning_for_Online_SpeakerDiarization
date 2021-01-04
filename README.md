@@ -43,5 +43,13 @@ $ python training.py
 
 You can get the 'model_epoch.pkl' during training. The .pkl file is the model parameter for each epoch.
 
+## Evaluation 
+
+The wav that you want to evaluate shoulded be put into evaluation_wav folder. Evaluation function is defined in evaluation.py. Please run 
+
+```bash
+$ python evaluation.py
+```
+And you will get a file named 'x.rttm' which contains speaker diarization result.
 
 
