@@ -45,28 +45,12 @@ class Model(nn.Module):
     def forward(self, x ):
 
         one = torch.squeeze(x[:,0:1,:,:])
-        
-        '''
-        one = self.mfcc(one)
-        
-        one = one.transpose(1,2)
-        '''
+
         other = torch.squeeze(x[:,1:2,:,:])
-        '''
-        other = self.mfcc(other)
-        
-        other = other.transpose(1,2)
-        '''
+
         one  = self.TDNN(one)
 
         other= self.TDNN(other)
-        '''
-
-        output = torch.mul(one,other)
-
-        output =  torch.sum(output,1)
-
-        '''
 
         output = self.cos(one,other)
 
