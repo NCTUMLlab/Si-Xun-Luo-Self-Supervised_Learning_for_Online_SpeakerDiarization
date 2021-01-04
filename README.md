@@ -30,12 +30,13 @@ Pytorch 1.2.0
 
 After downloaded, please call
 ```bash
-$ python preprocessing.py .
+$ python preprocessing.py 
 ```
 After that, you will get the 'wav_X.npy' and 'wav_Y.npy', which is the input of our model for training.
 
 ## Training
 
+Training function and model detail are both in train.py. Please run 
 ```bash
 $ python training.py
 ```
