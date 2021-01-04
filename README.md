@@ -36,7 +36,7 @@ After that, you will get the 'wav_X.npy' and 'wav_Y.npy', which is the input of 
 
 ## Training
 
-Training function and model detail are both in train.py. Please run 
+Training function is defined in train.py. Please run 
 ```bash
 $ python training.py
 ```
