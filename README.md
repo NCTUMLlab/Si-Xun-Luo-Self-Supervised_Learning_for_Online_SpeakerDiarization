@@ -8,7 +8,7 @@ This is the source code for the Master thesis Self-Supervised Learning for Onlin
   
   Self-supervised learning is a specific method of unsupervised learning, it was first used in image representation learning. The self-supervised method was introduced for image clustering, But we further apply the self-supervised learning to predict the initial speaker cluster label and extract the speaker feature in the online speaker diarization task, and then we utilize a suitable online clustering to calculate the final clustering result based on the result of the self-supervised learning and the speaker feature extraction to solve the problem of non-fixed cluster number in this online task. As for the speaker feature extraction we mentioned, there is a speaker level feature extraction based on self-supervised module with TDNN and Bi-LSTM. In our experiment, we used Voxcelb train-data to train the self-supervised learning based speaker feature extraction module and Voxceleb test-data to train the proposed online clustering method. The proposed method is an advanced method based on the the basic model we implemented. 
   
- ![image](architecture.png width="400" )
+ ![image](architecture.png)
 
 # Get starting
 ## Environment
