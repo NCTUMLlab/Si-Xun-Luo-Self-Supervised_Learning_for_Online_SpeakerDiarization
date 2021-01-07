@@ -52,4 +52,12 @@ $ python evaluation.py
 ```
 And you will get a file named 'x.rttm' which contains speaker diarization result.
 
+## Demo
+
+We design a demo tool which can help users see the result easily. Please run
+```bash
+$ cd demo
+$ python demo.py
+```
+
 
